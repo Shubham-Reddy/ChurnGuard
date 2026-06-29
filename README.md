@@ -11,7 +11,7 @@ AI-powered customer churn prediction and retention analytics platform.
 
 ## 🚀 Live Demo
 
-**[Launch ChurnGuard →](https://churnguard.streamlit.app)**
+**[Launch ChurnGuard →](https://churnguard-customer-retention.streamlit.app/)**
 
 ---
 
