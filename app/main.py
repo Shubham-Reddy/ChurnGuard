@@ -1791,7 +1791,8 @@ elif module == "📁 Upload Your Own Data":
 
             except Exception as e:
                 st.error(f"Column mapping error: {e}")
-                st.warning("Please ensure your CSV has similar columns to the Telco dataset.")
+                st.warning("This tool is designed for customer churn data. Please upload a CSV with customer attributes like tenure, MonthlyCharges, Contract type etc.")
+                st.info("💡 Download the sample dataset format to see the required columns.")
 
         except Exception as e:
             st.error(f"Error loading file: {e}")
