@@ -7,9 +7,10 @@ GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 import os
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 
-# Paths
-DATA_PATH = "../data/telco_churn.csv"
-MODEL_PATH = "../models/"
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(BASE_DIR, "data", "telco_churn.csv")
+MODEL_PATH = os.path.join(BASE_DIR, "models") + "/"
 
 # Model settings
 RANDOM_STATE = 42
