@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.pyc
+
+# Virtual environments
+env/
+venv/
+.env/
+conda-env/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Models (too large for GitHub)
+models/best_model.pkl
+models/X_test.pkl
+models/y_test.pkl
+models/feature_names.pkl
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+app/.streamlit/
+secrets.env
+*.env
