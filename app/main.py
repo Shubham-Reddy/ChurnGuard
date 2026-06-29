@@ -765,7 +765,7 @@ elif module == "🔍 SHAP Explainability":
     st.subheader("🌍 Global Feature Importance")
     shap_df = pd.DataFrame({
         'Feature': X_test.columns,
-        'Mean SHAP Value': np.abs(shap_vals).mean(axis=0).round(4)
+        'Mean SHAP Value': np.round(np.abs(shap_vals).mean(axis=0), 4)
     }).sort_values('Mean SHAP Value', ascending=False).head(15)
 
     fig = px.bar(shap_df, x='Mean SHAP Value', y='Feature',
