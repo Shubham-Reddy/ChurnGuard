@@ -763,10 +763,13 @@ elif module == "🔍 SHAP Explainability":
     st.markdown("---")
 
     st.subheader("🌍 Global Feature Importance")
+    shap_array = np.array(shap_vals, dtype=float)
+    mean_shap = np.abs(shap_array).mean(axis=0)
     shap_df = pd.DataFrame({
         'Feature': X_test.columns,
-        'Mean SHAP Value': np.round(np.abs(np.array(shap_vals)).mean(axis=0), 4)
+        'Mean SHAP Value': mean_shap
     }).sort_values('Mean SHAP Value', ascending=False).head(15)
+    shap_df['Mean SHAP Value'] = shap_df['Mean SHAP Value'].round(4)
 
     fig = px.bar(shap_df, x='Mean SHAP Value', y='Feature',
                  orientation='h',
